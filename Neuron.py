@@ -10,3 +10,5 @@ output = neuron(input)
 
 print(neuron.weight)
 print(neuron.bias)
+
+neuron.weight @ input  + neuron.bias
