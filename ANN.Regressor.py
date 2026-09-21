@@ -68,3 +68,4 @@ optimizer = optim.Adam(model.parameters())
 #Train the ANN
 training_losses = []
 vaild_loss = []
+epochs = 100
