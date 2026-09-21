@@ -54,3 +54,5 @@ class ANN(nn.Module):
 
             nn.Linear(6,1),
         )
+    def forward(self,X):
+        return self.model(X)
