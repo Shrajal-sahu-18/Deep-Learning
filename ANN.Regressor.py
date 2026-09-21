@@ -69,3 +69,6 @@ optimizer = optim.Adam(model.parameters())
 training_losses = []
 vaild_loss = []
 epochs = 100
+
+for epoch in range(epochs):
+    model.train()
