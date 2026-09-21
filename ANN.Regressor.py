@@ -73,3 +73,15 @@ epochs = 100
 for epoch in range(epochs):
     model.train()
     running_loss = 0.0
+
+    for xb,yb in train_loader:
+        # Xb  = feature of one batch 
+        # yb  = labels of one batch (target column)
+        optimizer.zero_grad() # optimizer gradient ko y accumalate kar leta isliye har step may new gradient calculate hae hamare new batch ke liye new gradient calculate hae isliye gradient ko zero kar rahe hai 
+        outputs = model(xb) #Forward propgation step
+        loss = criterion(outputs,yb) # compute loss loss for one batch then second batch
+        loss.backward() # back prop compute gradients
+        optimizer.step() # params update
+        running_loss += loss.item()  # ye loss pytorch ne calculate kiya hai isliye ye ek tensor value hai hame isko python float value may convert karna padega
+    epoch_train_loss = running_loss / len(train_loader)
+    training_losses.append(epoch_train_loss)
