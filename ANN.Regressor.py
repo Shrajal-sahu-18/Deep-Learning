@@ -32,3 +32,5 @@ y_test_tensor = torch.tensor(y_test.values ,dtype = torch.float32).view(-1,1)
 from torch.utils.data import TensorDataset, DataLoader
 train_dataset = TensorDataset(X_train_tensor,y_train_tensor)
 test_dataset = TensorDataset(X_test_tensor,y_test_tensor)
+
+train_loader = DataLoader(train_dataset , batch_size = 32 , shuffle = True)
