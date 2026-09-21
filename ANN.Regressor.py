@@ -85,3 +85,16 @@ for epoch in range(epochs):
         running_loss += loss.item()  # ye loss pytorch ne calculate kiya hai isliye ye ek tensor value hai hame isko python float value may convert karna padega
     epoch_train_loss = running_loss / len(train_loader)
     training_losses.append(epoch_train_loss)
+
+
+
+        # vaildation
+    
+    running_val_loss = 0.0
+    with torch.no_grad(): # pytorch by default gardient calculate karta hai yaha hmm bata rahe hai ki koi grad calculate nhi karna hai kyuki hamaramodel already train ho chuka hai 
+        for xb ,yb in test_loader:
+            outputs = model(xb)
+            loss = criterion(outputs,yb)
+            running_val_loss += loss# auto grad automatic gradient calculate
+    epoch_val_loss = running_val_loss / len(test_loader)
+    vaild_loss.append(epoch_val_loss)
