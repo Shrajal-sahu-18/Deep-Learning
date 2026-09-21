@@ -64,3 +64,7 @@ model = ANN()
 #loss ,optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters())
+
+#Train the ANN
+training_losses = []
+vaild_loss = []
