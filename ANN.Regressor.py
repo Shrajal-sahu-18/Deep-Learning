@@ -35,3 +35,22 @@ test_dataset = TensorDataset(X_test_tensor,y_test_tensor)
 
 train_loader = DataLoader(train_dataset , batch_size = 32 , shuffle = True)
 test_loader = DataLoader(test_dataset , batch_size = 32)
+
+# Define our ANN Model
+class ANN(nn.Module):
+    def __init__(self):
+        super(ANN,self).__init__()
+
+        self.model = nn.Sequential(
+            # 1st layer
+            nn.Linear(X_train.shape[1],6),
+            nn.ReLU(),
+
+            # 2nd Layer
+            nn.Linear(6,6),
+            nn.ReLU(),
+
+            # OutputLayer
+
+            nn.Linear(6,1),
+        )
