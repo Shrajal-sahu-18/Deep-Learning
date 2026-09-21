@@ -98,3 +98,5 @@ for epoch in range(epochs):
             running_val_loss += loss# auto grad automatic gradient calculate
     epoch_val_loss = running_val_loss / len(test_loader)
     vaild_loss.append(epoch_val_loss)
+
+    print(f"epoch ${epoch + 1} / {epochs} ==> train loss = $ {epoch_train_loss} & vaild loss = $ {epoch_val_loss}")
