@@ -60,3 +60,6 @@ class ANN(nn.Module):
 import torch.optim as optim
 
 model = ANN()
+
+#loss ,optimizer
+criterion = nn.MSELoss()
