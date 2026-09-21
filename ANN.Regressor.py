@@ -58,3 +58,5 @@ class ANN(nn.Module):
         return self.model(X)
 
 import torch.optim as optim
+
+model = ANN()
