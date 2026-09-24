@@ -100,3 +100,8 @@ for epoch in range(epochs):
     vaild_loss.append(epoch_val_loss)
 
     print(f"epoch ${epoch + 1} / {epochs} ==> train loss = $ {epoch_train_loss} & vaild loss = $ {epoch_val_loss}")
+
+
+    if epoch_val_loss < best_val_loss:
+        best_val_loss = epoch_val_loss
+        torch.save(model.state_dict(),"best_model.pt")
