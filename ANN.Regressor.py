@@ -137,3 +137,4 @@ print("Trainning_MSE",trainning_error.item())
 print("Testing_MSE",testing_error.item())
 
 from sklearn.metrics import r2_score
+print("R2_score",(r2_score(y_test,testing_prediction)))
