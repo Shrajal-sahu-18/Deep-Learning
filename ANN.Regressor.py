@@ -132,3 +132,4 @@ with torch.no_grad():
     testing_prediction = model(X_test_tensor)
 
     trainning_error = criterion(training_prediction,y_train_tensor)
+    testing_error = criterion(testing_prediction,y_test_tensor)
