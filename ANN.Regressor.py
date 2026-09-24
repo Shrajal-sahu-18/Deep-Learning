@@ -118,3 +118,7 @@ plt.plot(
     ,label = "Training loss"
 )
 plt.plot(loss_df["vaild loss"] , label= "vaildation loss")
+plt.xlabel("Epoches")
+plt.ylabel("lossses")
+plt.legend()
+plt.show()
