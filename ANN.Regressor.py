@@ -105,3 +105,5 @@ for epoch in range(epochs):
     if epoch_val_loss < best_val_loss:
         best_val_loss = epoch_val_loss
         torch.save(model.state_dict(),"best_model.pt")
+
+import matplotlib.pyplot as plt
