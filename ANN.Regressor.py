@@ -133,3 +133,5 @@ with torch.no_grad():
 
     trainning_error = criterion(training_prediction,y_train_tensor)
     testing_error = criterion(testing_prediction,y_test_tensor)
+print("Trainning_MSE",trainning_error.item())
+print("Testing_MSE",testing_error.item())
