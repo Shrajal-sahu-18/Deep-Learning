@@ -112,3 +112,4 @@ loss_df = pd.DataFrame({
     "train_loss":training_losses,
     "vaild loss":vaild_loss
 })
+plt.figure(figsize = (12,8))
