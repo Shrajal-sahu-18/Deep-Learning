@@ -117,3 +117,4 @@ plt.plot(
     loss_df["train_loss"]
     ,label = "Training loss"
 )
+plt.plot(loss_df["vaild loss"] , label= "vaildation loss")
