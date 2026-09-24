@@ -124,3 +124,6 @@ plt.legend()
 plt.show()
 
 model.load.state_dict(torch.load("best_model.pt"))
+
+# Evaluate our model
+model.eval()
