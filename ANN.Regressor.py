@@ -135,3 +135,5 @@ with torch.no_grad():
     testing_error = criterion(testing_prediction,y_test_tensor)
 print("Trainning_MSE",trainning_error.item())
 print("Testing_MSE",testing_error.item())
+
+from sklearn.metrics import r2_score
