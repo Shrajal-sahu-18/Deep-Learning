@@ -141,3 +141,4 @@ print("R2_score",(r2_score(y_test,testing_prediction)))
 
 predicted_df = pd.DataFrame(testing_prediction.numpy(), columns = ["Predicted Values"])
 actual_df = pd.DataFrame(y_test.values ,columns = ["Actual_value"])
+pd.concat([predicted_df,actual_df], axis = 1)
