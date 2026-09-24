@@ -122,3 +122,5 @@ plt.xlabel("Epoches")
 plt.ylabel("lossses")
 plt.legend()
 plt.show()
+
+model.load.state_dict(torch.load("best_model.pt"))
