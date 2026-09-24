@@ -107,3 +107,8 @@ for epoch in range(epochs):
         torch.save(model.state_dict(),"best_model.pt")
 
 import matplotlib.pyplot as plt
+
+loss_df = pd.DataFrame({
+    "train_loss":training_losses,
+    "vaild loss":vaild_loss
+})
