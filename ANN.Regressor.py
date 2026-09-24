@@ -113,3 +113,7 @@ loss_df = pd.DataFrame({
     "vaild loss":vaild_loss
 })
 plt.figure(figsize = (12,8))
+plt.plot(
+    loss_df["train_loss"]
+    ,label = "Training loss"
+)
