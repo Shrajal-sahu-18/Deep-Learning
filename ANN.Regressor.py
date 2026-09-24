@@ -127,3 +127,5 @@ model.load.state_dict(torch.load("best_model.pt"))
 
 # Evaluate our model
 model.eval()
+with torch.no_grad():
+    training_prediction = model(X_train_tensor)
