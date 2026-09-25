@@ -7,3 +7,4 @@ X = df.drop("Class",axis = 1)
 y = df["Class"]
 
 y.unique()
+
