@@ -9,3 +9,6 @@ y = df["Class"]
 y.unique()
 
 from sklearn.preprocessing import LabelEncoder,StandardScaler 
+
+le = LabelEncoder()
+y = le.fit_transform(y)
