@@ -8,3 +8,4 @@ y = df["Class"]
 
 y.unique()
 
+from sklearn.preprocessing import LabelEncoder,StandardScaler 
