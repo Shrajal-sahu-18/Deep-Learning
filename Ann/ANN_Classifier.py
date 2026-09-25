@@ -12,3 +12,5 @@ from sklearn.preprocessing import LabelEncoder,StandardScaler
 
 le = LabelEncoder()
 y = le.fit_transform(y)
+
+from sklearn.model_selection import train_test_split
