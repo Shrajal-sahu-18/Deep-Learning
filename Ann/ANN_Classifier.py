@@ -59,3 +59,4 @@ class ANN(nn.Module):
         return self.model(X)
 
 model = ANN()
+criteria = nn.CrossEntrophyloss()
