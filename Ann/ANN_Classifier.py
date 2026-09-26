@@ -57,3 +57,5 @@ class ANN(nn.Module):
 
     def forward(self,X):
         return self.model(X)
+
+model = ANN()
