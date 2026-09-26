@@ -38,3 +38,22 @@ test_dataset = TensorDataset(X_test_tensor,y_test_tensor)
 
 train_loader = DataLoader(train_dataset,batch_size=32,shuffle=True)
 test_loader = DataLoader(test_dataset,batch_size = 32)
+
+### Build ANN Classifier
+class ANN(nn.Module):
+    def __init__(self):
+        super(ANN,self).__init__()
+
+        self.model = nn.Sequential(
+            nn.Linear(X.shape[1],64),
+            nn.ReLU(),
+
+            nn.Linear(64,64),
+            nn.ReLU(),
+
+            nn.Linear(64,7)
+            
+        )
+
+    def forward(self,X):
+        return self.model(X)
