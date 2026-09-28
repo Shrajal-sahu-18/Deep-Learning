@@ -1,4 +1,5 @@
 # Deep-Learning
+This repo contains my deep learning journey
 
 ### Repo Structure
 ```
