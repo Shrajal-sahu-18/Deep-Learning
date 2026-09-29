@@ -76,3 +76,5 @@ for epoch in range(epochs):
         loss = criteria(outputs,yb)
         loss.backward()
         optimizer.step()
+        running_loss += loss.item() # ye loss pytorch ne calculate kiya hai isliye ye ek tensor value hai hame isko python float value may convert karna padega
+    trainning_loss = running_loss / len(train_loader)
