@@ -69,3 +69,8 @@ for epoch in range(epochs):
     model.train()
 
     running_loss = 0.0
+
+    for xb,yb in train_loader:
+        optimizer.zero_grad()
+        outputs = model(xb)
+        loss = criteria(outputs,yb)
