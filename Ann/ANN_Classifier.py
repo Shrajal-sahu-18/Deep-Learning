@@ -60,3 +60,4 @@ class ANN(nn.Module):
 
 model = ANN()
 criteria = nn.CrossEntrophyloss()
+optimizer = optim.Adam(model.parameters())
