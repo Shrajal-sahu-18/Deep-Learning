@@ -74,3 +74,5 @@ for epoch in range(epochs):
         optimizer.zero_grad()
         outputs = model(xb)
         loss = criteria(outputs,yb)
+        loss.backward()
+        optimizer.step()
