@@ -65,3 +65,5 @@ optimizer = optim.Adam(model.parameters())
 ## Trainning the model
 
 epochs = 100
+for epoch in range(epochs):
+    model.train()
