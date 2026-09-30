@@ -6,3 +6,4 @@ from torchvision.datasets import CIFAR10
 
 # Datasets and DataLoaders
 from torch.utils.data import DataLoader
+import torchvision.transforms as transforms
