@@ -97,3 +97,4 @@ for epoch in range(epochs):
             total += yb.size(0) # actual samples in each batch
     print("total vals:",total)
     print("correct vals:",correct)
+    print("Accuracy_Score:",correct/total *100)
