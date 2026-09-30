@@ -85,3 +85,11 @@ for epoch in range(epochs):
 
     # Evaluation
     model.eval()
+
+    total = 0
+    correct = 0
+
+    with torch.no_grad():
+        for xb,yb in test_loader:
+            outputs = model(xb) # [0.4,0.5,1.3 is tareke ki 7 values produce hogi]
+            _,predicted = torch.max(outputs,1)
