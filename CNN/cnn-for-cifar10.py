@@ -19,3 +19,4 @@ trainset = CIFAR10(root = "./data",train = True, download = True, transform = tr
 testset = CIFAR10(root = "./data",train = False , download = True , transform = transform)
 
 trainloader = DataLoader(trainset,batch_size = 64,shuffle = True)
+testloader = DataLoader(testset,batch_size = 64)
