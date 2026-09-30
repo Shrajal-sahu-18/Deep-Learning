@@ -93,3 +93,7 @@ for epoch in range(epochs):
         for xb,yb in test_loader:
             outputs = model(xb) # [0.4,0.5,1.3 is tareke ki 7 values produce hogi]
             _,predicted = torch.max(outputs,1)
+            correct += (predicted == yb).sum().item()
+            total += yb.size(0) # actual samples in each batch
+    print("total vals:",total)
+    print("correct vals:",correct)
