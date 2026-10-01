@@ -51,3 +51,9 @@ class CNN(nn.Module):
 
             nn.linear(256,10)
         )
+        
+    def forward(self,x):  #upper constructor hai call niche say hoga
+        x = self.conv_layers(x)
+        x = x.view(x.size(0),-1) # Flattening
+        x = self.fc_layers(x)
+        return x
