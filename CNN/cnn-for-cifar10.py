@@ -25,3 +25,8 @@ testloader = DataLoader(testset,batch_size = 64)
 class CNN(nn.Module):
     def __init__(self):
         super(CNN,self).__init__()
+        self.conv_layers = nn.Sequential(
+            # First Convonutional Layer
+            nn.conv2D(3,32,kernel_size =3,padding = 1),
+            nn.Relu(),
+            nn.MaxPool2D(2,2) # kernel = 2 ,stride = 2
