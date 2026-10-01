@@ -30,3 +30,8 @@ class CNN(nn.Module):
             nn.conv2D(3,32,kernel_size =3,padding = 1),
             nn.Relu(),
             nn.MaxPool2D(2,2) # kernel = 2 ,stride = 2
+
+            # Second Convonutional layer
+            nn.conv2D(32,64,kernel_size = 3,padding = 1),
+            nn.ReLU(),
+            nn.MaxPool2D(2,2) # kernel = 2 ,stride = 2
