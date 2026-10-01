@@ -22,3 +22,6 @@ trainloader = DataLoader(trainset,batch_size = 64,shuffle = True)
 testloader = DataLoader(testset,batch_size = 64)
 
 ## Build The Cnn
+class CNN(nn.Module):
+    def __init__(self):
+        super(CNN,self).__init__()
