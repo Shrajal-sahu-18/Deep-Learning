@@ -12,7 +12,7 @@ import torchvision.transforms as transforms
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
-    c
+    
 ])
 
 trainset = CIFAR10(root = "./data",train = True, download = True, transform = transform)
@@ -29,15 +29,25 @@ class CNN(nn.Module):
             # First Convonutional Layer
             nn.conv2D(3,32,kernel_size =3,padding = 1),
             nn.Relu(),
-            nn.MaxPool2D(2,2) # kernel = 2 ,stride = 2
+            nn.MaxPool2D(2,2), # kernel = 2 ,stride = 2
 
             # Second Convonutional layer
             nn.conv2D(32,64,kernel_size = 3,padding = 1),
             nn.ReLU(),
-            nn.MaxPool2D(2,2) # kernel = 2 ,stride = 2
+            nn.MaxPool2D(2,2), # kernel = 2 ,stride = 2
 
 
-              # Third Layer
+                # Third Layer
             nn.conv2D(64,128,kernel_size = 3,padding = 1),
             nn.ReLU(),
-            nn.MaxPool2D(2,2) # kernel = 2 ,stride = 2
+            nn.MaxPool2D(2,2), # kernel = 2 ,stride = 2
+        )
+            
+
+        
+        self.fc_layers = nn.Sequential(
+            nn.Linear(4*4*128,256),
+            nn.ReLU(),
+
+            nn.linear(256,10)
+        )
