@@ -35,3 +35,9 @@ class CNN(nn.Module):
             nn.conv2D(32,64,kernel_size = 3,padding = 1),
             nn.ReLU(),
             nn.MaxPool2D(2,2) # kernel = 2 ,stride = 2
+
+
+              # Third Layer
+            nn.conv2D(64,128,kernel_size = 3,padding = 1),
+            nn.ReLU(),
+            nn.MaxPool2D(2,2) # kernel = 2 ,stride = 2
