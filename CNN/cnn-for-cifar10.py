@@ -109,3 +109,5 @@ with torch.no_grad():
 
 
 print(f"Accuracy = {correct_labels / total_labels * 100}")
+
+print("Complete project")
