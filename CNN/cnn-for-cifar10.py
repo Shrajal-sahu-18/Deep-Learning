@@ -106,3 +106,6 @@ with torch.no_grad():
 
         correct_labels += (predicted == labels).sum().item()
         total_labels += images.size(0)
+
+
+print(f"Accuracy = {correct_labels / total_labels * 100}")
