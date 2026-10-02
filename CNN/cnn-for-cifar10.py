@@ -88,3 +88,5 @@ for epoch in range(epochs):
             outputs = model(images)
             loss = criterion(outputs,labels)
             epoch_validloss += loss.item()
+        valid_loss = epoch_validloss / len(testloader)
+        validation_loss.append(valid_loss)
