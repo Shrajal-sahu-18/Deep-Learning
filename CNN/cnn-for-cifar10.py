@@ -59,3 +59,4 @@ class CNN(nn.Module):
         return x
 
 model =CNN()
+criterion = nn.CrossEntropyLoss()
