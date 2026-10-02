@@ -61,3 +61,11 @@ class CNN(nn.Module):
 model =CNN()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters())
+
+# Trainning Our CNN
+epochs = 10
+trainning_loss = []
+validation_loss = []
+best_val_loss = float("inf")
+for epoch in range(epochs):
+    epoch_trainning_loss = 0.0
