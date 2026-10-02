@@ -75,3 +75,4 @@ for epoch in range(epochs):
         output = model.forward(images) 
         loss = criterion(output,labels)
         loss.backward()
+        optimizer.step()
