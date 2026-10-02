@@ -90,3 +90,7 @@ for epoch in range(epochs):
             epoch_validloss += loss.item()
         valid_loss = epoch_validloss / len(testloader)
         validation_loss.append(valid_loss)
+
+    if best_val_loss > valid_loss:
+        best_val_loss = valid_loss
+        torch.save(model.state_dict(),"best_model.pth")
