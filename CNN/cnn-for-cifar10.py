@@ -100,3 +100,6 @@ correct_labels = 0
 total_labels = 0
 model.eval()
 with torch.no_grad():
+    for images ,labels in testloader:
+        outputs = model.forward(images)
+        _,predicted = torch.max(outputs,1)
