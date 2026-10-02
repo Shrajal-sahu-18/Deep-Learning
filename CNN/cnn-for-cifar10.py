@@ -78,3 +78,4 @@ for epoch in range(epochs):
         optimizer.step()
 
         epoch_trainning_loss += loss.item()
+    epoc_loss = epoch_trainning_loss /len(trainloader)
