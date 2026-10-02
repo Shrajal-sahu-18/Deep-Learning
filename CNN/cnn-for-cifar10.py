@@ -73,3 +73,4 @@ for epoch in range(epochs):
     for images,labels in trainloader:
         optimizer.zero_grad() # purane gradients clear
         output = model.forward(images) 
+        loss = criterion(output,labels)
