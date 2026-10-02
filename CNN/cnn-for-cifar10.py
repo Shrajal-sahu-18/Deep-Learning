@@ -94,3 +94,9 @@ for epoch in range(epochs):
     if best_val_loss > valid_loss:
         best_val_loss = valid_loss
         torch.save(model.state_dict(),"best_model.pth")
+
+# Evaluate Our Cnn
+correct_labels = 0
+total_labels = 0
+model.eval()
+with torch.no_grad():
