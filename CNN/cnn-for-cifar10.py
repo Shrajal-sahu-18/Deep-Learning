@@ -84,3 +84,6 @@ for epoch in range(epochs):
     model.eval()
     epoch_validloss = 0.0
     with torch.no_grad():
+        for images,labels in testloader:
+            outputs = model(images)
+            loss = criterion(outputs,labels)
