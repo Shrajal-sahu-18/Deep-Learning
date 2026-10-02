@@ -82,3 +82,5 @@ for epoch in range(epochs):
     trainning_loss.append(epoc_loss)
 
     model.eval()
+    epoch_validloss = 0.0
+    with torch.no_grad():
