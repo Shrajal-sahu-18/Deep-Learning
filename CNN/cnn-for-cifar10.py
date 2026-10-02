@@ -80,3 +80,5 @@ for epoch in range(epochs):
         epoch_trainning_loss += loss.item()
     epoc_loss = epoch_trainning_loss /len(trainloader)
     trainning_loss.append(epoc_loss)
+
+    model.eval()
