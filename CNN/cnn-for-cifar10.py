@@ -69,3 +69,6 @@ validation_loss = []
 best_val_loss = float("inf")
 for epoch in range(epochs):
     epoch_trainning_loss = 0.0
+
+    for images,labels in trainloader:
+        optimizer.zero_grad() # purane gradients clear
