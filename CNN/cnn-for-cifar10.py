@@ -103,3 +103,6 @@ with torch.no_grad():
     for images ,labels in testloader:
         outputs = model.forward(images)
         _,predicted = torch.max(outputs,1)
+
+        correct_labels += (predicted == labels).sum().item()
+        total_labels += images.size(0)
