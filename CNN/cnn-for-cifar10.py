@@ -76,3 +76,5 @@ for epoch in range(epochs):
         loss = criterion(output,labels)
         loss.backward()
         optimizer.step()
+
+        epoch_trainning_loss += loss.item()
