@@ -87,3 +87,4 @@ for epoch in range(epochs):
         for images,labels in testloader:
             outputs = model(images)
             loss = criterion(outputs,labels)
+            epoch_validloss += loss.item()
