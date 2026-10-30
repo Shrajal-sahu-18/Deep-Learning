@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import nltk
 
 df = pd.read_csv("IMDB Dataset.csv")
 
