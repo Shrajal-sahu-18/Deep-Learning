@@ -23,3 +23,10 @@ def remove_punctuations(text):
     return text
 
 df["review"] = df["review"].apply(remove_punctuations)
+
+# Remove Html Tag
+def removing_html(text):
+    text = re.sub(r"<.*?>","",text)
+    return text
+
+df["review"] = df["review"].apply(removing_html)
