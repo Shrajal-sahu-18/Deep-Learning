@@ -46,3 +46,17 @@ def remove_stopwords(text):
     return text
 
 df["review"] = df["review"].apply(remove_stopwords)
+
+# Steeming
+def stemming(text):
+    ps = PorterStemmer()
+    stemmed_words = []
+
+    tokens = word_tokenize(text)
+    for token in tokens:
+        stemmed_token = ps.stem(token)
+        stemmed_words.append(stemmed_token)
+
+    return " ".join(stemmed_words)
+
+df["review"] = df["review"].apply(stemming)
