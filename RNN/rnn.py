@@ -34,3 +34,14 @@ def removing_html(text):
 
 df["review"] = df["review"].apply(removing_html)
 
+#Remove Stopwords
+def remove_stopwords(text):
+    tokens = word_tokenize(text)
+    stop_word = stopwords.words("english")
+
+    for word in tokens:
+        if word in stop_word:
+            text = text.replace(word ,"")
+    return text
+
+df["review"] = df["review"].apply(remove_stopwords)
