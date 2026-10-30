@@ -1,6 +1,8 @@
 import pandas as pd
 import re
 import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 
 df = pd.read_csv("IMDB Dataset.csv")
 
@@ -31,3 +33,4 @@ def removing_html(text):
     return text
 
 df["review"] = df["review"].apply(removing_html)
+
