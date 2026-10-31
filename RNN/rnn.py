@@ -4,6 +4,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
+from sklearn.preprocessing import LabelEncoder
 
 df = pd.read_csv("IMDB Dataset.csv")
 
