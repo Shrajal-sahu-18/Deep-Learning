@@ -82,3 +82,8 @@ X_train,X_test,y_train,y_test = train_test_split(
 
 X_train = X_train.toarray()
 X_test = X_test.toarray()
+
+trainset = TensorDataset(
+    torch.from_numpy(X_train).float(), # Tensor may Convert
+    torch.from_numpy(y_train.values).float()
+)
