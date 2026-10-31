@@ -9,6 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 import torch
 from torch.utils.data import TensorDataset , DataLoader
+import torch.nn as nn
 
 df = pd.read_csv("IMDB Dataset.csv")
 
