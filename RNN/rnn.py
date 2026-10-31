@@ -87,3 +87,8 @@ trainset = TensorDataset(
     torch.from_numpy(X_train).float(), # Tensor may Convert
     torch.from_numpy(y_train.values).float()
 )
+
+testset = TensorDataset(
+    torch.from_numpy(X_test).float(),
+    torch.from_numpy(y_test.values).float()
+)
