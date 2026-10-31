@@ -68,3 +68,7 @@ le = LabelEncoder()
 df["sentiment"] = le.fit_transform(df["sentiment"])
 
 y = df["sentiment"]
+
+# Vecotrization
+tf = TfidfVectorizer(max_features = 5000)  # mtlb top ke 5000 words chahiye kyuki agar max_feasture nhi karenge to jyada word ke karan hamara system isko handle nhi kar payega
+X = tf.fit_transform(df["review"])
