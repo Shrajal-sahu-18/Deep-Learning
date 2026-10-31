@@ -65,3 +65,5 @@ df["review"] = df["review"].apply(stemming)
 # Encoding
 le = LabelEncoder()
 df["sentiment"] = le.fit_transform(df["sentiment"])
+
+y = df["sentiment"]
