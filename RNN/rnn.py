@@ -94,3 +94,4 @@ testset = TensorDataset(
 )
 
 train_loader = DataLoader(trainset , shuffle = True , batch_size = 64)
+test_loader = DataLoader(testset , shuffle = True , batch_size = 64)
