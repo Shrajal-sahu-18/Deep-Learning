@@ -61,3 +61,7 @@ def stemming(text):
     return " ".join(stemmed_words)
 
 df["review"] = df["review"].apply(stemming)
+
+# Encoding
+le = LabelEncoder()
+df["sentiment"] = le.fit_transform(df["sentiment"])
