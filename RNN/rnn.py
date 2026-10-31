@@ -92,3 +92,5 @@ testset = TensorDataset(
     torch.from_numpy(X_test).float(),
     torch.from_numpy(y_test.values).float()
 )
+
+train_loader = DataLoader(trainset , shuffle = True , batch_size = 64)
