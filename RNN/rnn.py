@@ -106,3 +106,5 @@ class RNN(nn.Module):
         self.num_layers = num_layers
 
         self.rnn = nn.RNN(input_size,hidden_size,num_layers,batch_first = True)
+
+        self.fc = nn.Linear(hidden_size,1)
