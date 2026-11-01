@@ -113,3 +113,4 @@ class RNN(nn.Module):
 
         h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size)
         out,_ = self.rnn(x,h0)
+        out = self.fc(out[:, -1, :])
