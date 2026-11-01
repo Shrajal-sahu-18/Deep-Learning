@@ -112,3 +112,4 @@ class RNN(nn.Module):
     def forward(self,x):
 
         h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size)
+        out,_ = self.rnn(x,h0)
