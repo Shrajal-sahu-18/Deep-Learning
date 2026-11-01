@@ -99,3 +99,4 @@ train_loader = DataLoader(trainset , shuffle = True , batch_size = 64)
 test_loader = DataLoader(testset , shuffle = True , batch_size = 64)
 
 class RNN(nn.Module):
+    def __init__(self, input_size, hidden_size = 128, num_layers = 1):
