@@ -120,3 +120,4 @@ class RNN(nn.Module):
 input_size = X_train.shape[1]
 model = RNN(input_size)
 criterion = nn.BCELoss()
+optimizer = optim.Adam(model.parameters())
