@@ -126,3 +126,6 @@ num_epochs = 10
 
 for epoch in range(num_epochs):
     model.train()
+
+    for Xb,yb in train_loader:
+        optimizer.zero_grad()
