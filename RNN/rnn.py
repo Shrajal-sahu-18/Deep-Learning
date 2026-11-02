@@ -116,3 +116,5 @@ class RNN(nn.Module):
         out = self.fc(out[:, -1, :])
 
         return out
+
+input_size = X_train.shape[1]
