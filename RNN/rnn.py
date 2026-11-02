@@ -123,3 +123,6 @@ criterion = nn.BCELoss()
 optimizer = optim.Adam(model.parameters())
 
 num_epochs = 10
+
+for epoch in range(num_epochs):
+    model.train()
